@@ -6,12 +6,12 @@
     {
       "canonical_name": "Andrej Karpathy",
       "aliases": [],
-      "role_org": "Founder, Eureka Labs; ex-OpenAI, ex-Tesla AI",
+      "role_org": "Anthropic (joined May 2026, frontier LLM R&D); ex-OpenAI, ex-Tesla AI; founder Eureka Labs",
       "platforms": {
-        "x": { "handle": "karpathy", "status": "active", "last_checked": "2026-06-18" },
+        "x": { "handle": "karpathy", "status": "active", "last_checked": "2026-06-19" },
         "linkedin": { "id": "andrej-karpathy-9a650716", "status": "dead", "last_checked": "2026-06-18" }
       },
-      "notes": "Profile headline states he doesn't use LinkedIn (only 3 posts, 4-7yr old). X-native."
+      "notes": "Joined Anthropic 2026-05-20 (verified via his X post, 27M views). Now an INSIDER on Claude/Anthropic releases — flips his Fable 5 praise from outsider-echo to insider framing. Bio not yet updated (still 'I like training large deep neural nets'/Stanford). X-native; LinkedIn dead."
     },
     {
       "canonical_name": "Jakub Pachocki",
