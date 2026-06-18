@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "_status_vocab": ["active", "dormant", "dead", "none", "not_found", "unknown"],
+  "_notes": "canonical_name is the join key across platforms. status is per-platform activeness; last_checked is when that platform was last verified (YYYY-MM-DD). role_org doubles as entity-context for the significance filter.",
+  "people": [
+    {
+      "canonical_name": "Andrej Karpathy",
+      "aliases": [],
+      "role_org": "Founder, Eureka Labs; ex-OpenAI, ex-Tesla AI",
+      "platforms": {
+        "x": { "handle": "karpathy", "status": "active", "last_checked": "2026-06-18" },
+        "linkedin": { "id": "andrej-karpathy-9a650716", "status": "dead", "last_checked": "2026-06-18" }
+      },
+      "notes": "Profile headline states he doesn't use LinkedIn (only 3 posts, 4-7yr old). X-native."
+    },
+    {
+      "canonical_name": "Jakub Pachocki",
+      "aliases": [],
+      "role_org": "Chief Scientist, OpenAI",
+      "platforms": {
+        "x": { "handle": "merettm", "status": "active", "last_checked": "2026-06-18" },
+        "linkedin": { "id": "jakub-pachocki", "status": "none", "last_checked": "2026-06-18" }
+      },
+      "notes": "Low-volume X poster; substantive when he posts (OpenAI research/positioning)."
+    },
+    {
+      "canonical_name": "Boris Cherny",
+      "aliases": [],
+      "role_org": "Anthropic; creator/head of Claude Code",
+      "platforms": {
+        "x": { "handle": "bcherny", "status": "active", "last_checked": "2026-06-18" },
+        "linkedin": { "id": "bcherny", "status": "dormant", "last_checked": "2026-06-18" }
+      },
+      "notes": "X: mix of insider launches + real insight + hype. LinkedIn dormant (~10mo)."
+    },
+    {
+      "canonical_name": "Dwarkesh Patel",
+      "aliases": [],
+      "role_org": "Host, Dwarkesh Podcast",
+      "platforms": {
+        "x": { "handle": "dwarkesh_sp", "status": "active", "last_checked": "2026-06-18" },
+        "linkedin": { "id": "dwarkesh-sp", "status": "dormant", "last_checked": "2026-06-18" }
+      },
+      "notes": "X active but mostly history/science clips — off the AI-trend goal. LinkedIn dormant (~10mo)."
+    },
+    {
+      "canonical_name": "Percy Liang",
+      "aliases": [],
+      "role_org": "Associate Professor, Stanford CS; CRFM/HELM; Marin open lab; Together AI",
+      "platforms": {
+        "x": { "handle": "percyliang", "status": "active", "last_checked": "2026-06-18" },
+        "linkedin": { "id": "percy-liang-717b8a", "status": "none", "last_checked": "2026-06-18" }
+      },
+      "notes": "High-signal on X (posts his own AI lab work). LinkedIn: reactions only, no original posts."
+    },
+    {
+      "canonical_name": "Shim Kyu-hyun",
+      "aliases": ["Gyuhyeon Sim", "심규현"],
+      "role_org": "Founder & CEO, LETSUR (letsur.ai)",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": "ghsim", "status": "active", "last_checked": "2026-06-18" }
+      },
+      "notes": "LinkedIn-active (multiple posts/week, substantive). From LETSUR research 2026-06-02."
+    },
+    {
+      "canonical_name": "Kim Kangyeol",
+      "aliases": [],
+      "role_org": "Co-founder, LETSUR (ex-DAVIAN Lab, KAIST)",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": "kangyeol-kim-251857138", "status": "unknown", "last_checked": "2026-06-02" }
+      },
+      "notes": "Seen in LETSUR research 2026-06-02; activeness not re-verified."
+    },
+    {
+      "canonical_name": "Kim Taehee",
+      "aliases": [],
+      "role_org": "Co-founder, LETSUR",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": "taehee-kim-202053131", "status": "active", "last_checked": "2026-06-02" }
+      },
+      "notes": "Noted as vocal/posting in LETSUR research 2026-06-02; not re-verified since."
+    },
+    {
+      "canonical_name": "Cho (LETSUR co-founder)",
+      "aliases": [],
+      "role_org": "Co-founder, LETSUR (ex-DAVIAN Lab, KAIST)",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": "wcho92", "status": "unknown", "last_checked": "2026-06-02" }
+      },
+      "notes": "Full canonical name TBD. Seen in LETSUR research 2026-06-02."
+    },
+    {
+      "canonical_name": "Younghyun Chung",
+      "aliases": [],
+      "role_org": "CEO, Corca (corca-ai)",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": "younghyun", "status": "unknown", "last_checked": "2026-06-18" }
+      },
+      "notes": "Corca CEO. LinkedIn id from search; activeness not checked."
+    },
+    {
+      "canonical_name": "Daniel Hahn",
+      "aliases": [],
+      "role_org": "Co-founder, Corca",
+      "platforms": {
+        "x": { "handle": null, "status": "unknown", "last_checked": null },
+        "linkedin": { "id": null, "status": "unknown", "last_checked": "2026-06-18" }
+      },
+      "notes": "Corca co-founder surfaced in search; handle not captured."
+    },
+    {
+      "canonical_name": "Alan (Corca CTO) — UNRESOLVED",
+      "aliases": [],
+      "role_org": "CTO, Corca (claimed)",
+      "platforms": {
+        "x": { "handle": null, "status": "not_found", "last_checked": "2026-06-18" },
+        "linkedin": { "id": null, "status": "not_found", "last_checked": "2026-06-18" }
+      },
+      "notes": "Could NOT confirm a 'CTO Alan' at Corca. Closest: 배휘동, 'AX Team Lead @ Corca.ai' (not CTO, no Alan nickname). Needs a real identifier (handle / Korean name)."
+    }
+  ]
+}
