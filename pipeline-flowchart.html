@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Trend Monitor — sourcing pipelines</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f2430; --muted:#5a6473; }
+  body { font-family:"Noto Sans KR",-apple-system,Segoe UI,Roboto,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+         margin:0; padding:28px 20px 60px; color:var(--ink); background:#fbfcfe; }
+  .wrap { max-width:1180px; margin:0 auto; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 18px; font-size:14px; }
+  .legend { display:flex; flex-wrap:wrap; gap:14px; margin:14px 0 22px; font-size:13px; color:var(--muted); }
+  .legend span { display:inline-flex; align-items:center; gap:6px; }
+  .chip { width:22px; height:14px; border-radius:3px; display:inline-block; border:1px solid #0002; }
+  .mermaid { background:#fff; border:1px solid #e6e9f0; border-radius:12px; padding:18px; overflow-x:auto; }
+  .notes { margin-top:26px; font-size:14px; color:#333; line-height:1.55; }
+  .notes h2 { font-size:16px; margin:20px 0 6px; }
+  code { background:#eef1f6; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI-Trend Monitor — 3 sourcing pipelines & aggregation</h1>
+  <p class="sub">X / LinkedIn / YouTube → one shared judge, two registries, one digest. Diamonds = 분기 (decisions). Dotted = shared resources / feedback.</p>
+
+  <div class="legend">
+    <span><i class="chip" style="background:#eef0ff"></i> registry / brain</span>
+    <span><i class="chip" style="background:#fff3cd"></i> 분기 (decision)</span>
+    <span><i class="chip" style="background:#e7f5e7"></i> action (report / engage / grow)</span>
+    <span><i class="chip" style="background:#f6d6d6"></i> stop / empty</span>
+  </div>
+
+  <pre class="mermaid">
+flowchart TB
+  classDef reg  fill:#eef0ff,stroke:#5560a8,color:#1f2430;
+  classDef dec  fill:#fff3cd,stroke:#b8860b,color:#5a4500;
+  classDef act  fill:#e7f5e7,stroke:#2e7d32,color:#14431a;
+  classDef stop fill:#f6d6d6,stroke:#a33,color:#7a1c1c;
+
+  subgraph REG["📚 Shared brain & registries"]
+    direction LR
+    RUB{{"significance rubric<br/>= the shared judge"}}:::reg
+    PDB[("people-db<br/>humans + X/LinkedIn watchlist")]:::reg
+    CHN[("channels.json<br/>YouTube watchlist")]:::reg
+    SEEN[("dedup<br/>seen-ids store")]:::reg
+  end
+
+  %% ===== X / Twitter =====
+  subgraph XP["𝕏  X / Twitter"]
+    direction TB
+    X1["Watchlist scan<br/>(tracked people)"] --> Xn{"new posts?"}:::dec
+    Xn -->|no| Xs["empty / stop"]:::stop
+    Xn -->|yes| Xm["merge threads"] --> Xj{"SIG?"}:::dec
+    Xj -->|"INSIG / SKIP"| Xr["record for dedup only"]
+    Xj -->|SIG| Xa["report + like + follow<br/>+ reshare author → people-db"]:::act
+    X2["Home-feed scan<br/>(bounded)"] --> Xhj{"SIG?"}:::dec
+    Xhj -->|SIG| Xha["report + like<br/>(follow only if AI-person)"]:::act
+    Xha --> Xhd{"untracked<br/>& AI-person?"}:::dec
+    Xhd -->|yes| Xadd["add person → people-db"]:::act
+  end
+
+  %% ===== LinkedIn =====
+  subgraph LP["in  LinkedIn"]
+    direction TB
+    L1["Watchlist scan<br/>(tracked people)"] --> Ln{"new posts?"}:::dec
+    Ln -->|no| Ls["empty / stop"]:::stop
+    Ln -->|yes| Lj{"SIG?"}:::dec
+    Lj -->|"INSIG / SKIP"| Lr["record for dedup only"]
+    Lj -->|SIG| La["report + like + follow<br/>+ reshare author → people-db"]:::act
+    L2["Home-feed scan<br/>(bounded)"] --> Lhj{"SIG?"}:::dec
+    Lhj -->|SIG| Lha["report + like<br/>(follow only if AI-person)"]:::act
+    Lha --> Lhd{"untracked<br/>& AI-person?"}:::dec
+    Lhd -->|yes| Ladd["add person → people-db"]:::act
+  end
+
+  %% ===== YouTube =====
+  subgraph YP["▶  YouTube"]
+    direction TB
+    Y1["Channel scan v2<br/>(tracked channels)"] --> Yn{"new video?"}:::dec
+    Yn -->|no| Ys["empty / stop"]:::stop
+    Yn -->|yes| Ypf{"AI by title?"}:::dec
+    Ypf -->|no| Yk["skip"]
+    Ypf -->|yes| Ytx["transcript (yt-dlp)"] --> Yv{"valuable?<br/>(reads content)"}:::dec
+    Yv -->|no| Yk2["skip"]
+    Yv -->|yes| Ya["per-video summary → report<br/>+ guests-only → people-db"]:::act
+    Ya --> Yd["harvest recommended sidebar"]
+    Yd --> Yrg{"≤ 2 weeks<br/>& valuable?"}:::dec
+    Yrg -->|yes| Yres{"resolve by video-id<br/>≥ sub-floor?"}:::dec
+    Yres -->|yes| Ych["add channel → channels.json"]:::act
+    Yres -->|"no (impersonator)"| Yrej["reject"]:::stop
+  end
+
+  %% ===== registries feed the scanners =====
+  PDB -. "watchlist" .-> X1
+  PDB -. "watchlist" .-> L1
+  PDB -. "your feed" .-> X2
+  PDB -. "your feed" .-> L2
+  CHN -. "watchlist" .-> Y1
+  RUB -. "judge" .-> Xj
+  RUB -. "judge" .-> Xhj
+  RUB -. "judge" .-> Lj
+  RUB -. "judge" .-> Lhj
+  RUB -. "judge" .-> Yv
+  SEEN -. "dedup" .-> Xn
+  SEEN -. "dedup" .-> Ln
+  SEEN -. "dedup" .-> Yn
+
+  %% ===== aggregation =====
+  Xa --> DIG
+  Xha --> DIG
+  La --> DIG
+  Lha --> DIG
+  Ya --> DIG
+  DIG["📰 Aggregated digest<br/>(per-person · per-video, significant only)"]:::act
+
+  Xa --> ENG
+  Xha --> ENG
+  La --> ENG
+  Lha --> ENG
+  ENG["👍 Engagement<br/>like · follow · (subscribe)<br/>tunes the feeds"]:::act
+
+  %% ===== feedback loop: discovery grows the registries =====
+  Xadd --> PDB
+  Ladd --> PDB
+  Xa -. "discovered author" .-> PDB
+  La -. "discovered author" .-> PDB
+  Ya -. "guest" .-> PDB
+  Ych --> CHN
+  PDB == "scanned next run" ==> X1
+  CHN == "scanned next run" ==> Y1
+  </pre>
+
+  <div class="notes">
+    <h2>How they aggregate</h2>
+    <p>All three sources are <b>capture adapters</b> over one shared core. Only capture &amp; engage are platform-specific; everything below is shared:</p>
+    <ul>
+      <li><b>One judge</b> — the same significance rubric (<code>judge_prompt.md</code>) decides SIG/INSIG/SKIP (and "valuable" for video content) on every source.</li>
+      <li><b>Two registries</b> — <code>people-db</code> is the human identity layer <i>and</i> the X/LinkedIn watchlist; <code>channels.json</code> is the YouTube watchlist. Discovery grows them, and they feed the next run's scans (the <b>== scanned next run ==&gt;</b> loop).</li>
+      <li><b>One dedup store</b> — shared seen-ids mean a post/video caught by one path is never re-reported by another.</li>
+      <li><b>One digest</b> — significant items from all three converge into the dated report (per-person for X/LinkedIn, per-video for YouTube).</li>
+      <li><b>Bounding</b> — every "new?" 분기 can answer <i>no</i> → empty run; all caps are ceilings, never targets.</li>
+    </ul>
+    <p style="color:#5a6473"><b>Status:</b> X &amp; LinkedIn (watchlist + home) and YouTube (channel-scan + discovery) are built; engagement is dry-run-verified (not flipped live) on X/LinkedIn and deferred on YouTube; the video-"valuable" criterion is still a deferred stand-in.</p>
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({ startOnLoad:true, theme:"base", flowchart:{ useMaxWidth:true, htmlLabels:true, curve:"basis" },
+    themeVariables:{ fontSize:"13px", fontFamily:"-apple-system,Segoe UI,Roboto,sans-serif" } });
+</script>
+</body>
+</html>
