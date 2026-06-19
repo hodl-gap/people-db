@@ -307,6 +307,29 @@
         }
       },
       "notes": "YouTube channel seeded 2026-06-19. SNS handles unresolved."
+    },
+    {
+      "canonical_name": "Sarah Friar",
+      "aliases": [],
+      "role_org": "CFO, OpenAI (ex-Nextdoor CEO, ex-Square CFO; Stanford trustee)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "not_found",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "youtube": {
+          "channel": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Discovered as GUEST on All-In Podcast (OpenAI CFO interview), 2026-06-19. SNS resolution UNFOUND: obvious @SarahFriar is a different person (104 followers, dormant since 2017) — rejected per confident-only rule. All-In co-hosts NOT appended (guests-only)."
     }
   ]
 }
