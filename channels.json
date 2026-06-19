@@ -19,13 +19,15 @@
   "channels": [
     {
       "channel": "bloomberg",
-      "url": "https://www.youtube.com/bloomberg",
-      "name": "Bloomberg",
+      "url": "https://www.youtube.com/@business",
+      "name": "Bloomberg Originals",
       "kind": "org",
       "linked_person": null,
       "status": "unknown",
       "last_checked": null,
-      "notes": "Broad business/finance; a minority of videos are AI."
+      "notes": "Broad business/finance; a minority of videos are AI.",
+      "channel_id": "UCUMZ7gohGI9HcU9VNsr2FJQ",
+      "subscribers": 5070000
     },
     {
       "channel": "@allin",
@@ -35,17 +37,21 @@
       "linked_person": null,
       "status": "unknown",
       "last_checked": null,
-      "notes": "VC/tech podcast (Chamath, Sacks, Friedberg, Calacanis); some AI per episode."
+      "notes": "VC/tech podcast (Chamath, Sacks, Friedberg, Calacanis); some AI per episode.",
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "subscribers": 1090000
     },
     {
       "channel": "@chester_roh",
       "url": "https://www.youtube.com/@chester_roh",
-      "name": "Chester Roh",
+      "name": "노정석",
       "kind": "person",
       "linked_person": "Chester Roh",
       "status": "unknown",
       "last_checked": null,
-      "notes": "Korean serial entrepreneur / AI investor; nearly all AI."
+      "notes": "Korean serial entrepreneur / AI investor; nearly all AI.",
+      "channel_id": "UCz-BiVywYdO6iXhjXkw_Kgw",
+      "subscribers": 32400
     },
     {
       "channel": "@LangChain",
@@ -55,7 +61,9 @@
       "linked_person": null,
       "status": "unknown",
       "last_checked": null,
-      "notes": "via recommended: The Future of AI Agents with Andrew Ng | Interrupt 26 (1 day ago)"
+      "notes": "via recommended: The Future of AI Agents with Andrew Ng | Interrupt 26 (1 day ago)",
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+      "subscribers": 186000
     }
   ]
 }
