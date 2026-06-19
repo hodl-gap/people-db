@@ -9,9 +9,19 @@ AI advancements — what leaders are doing/thinking), different shape.
 - One video → N human records. The video is how a human reads it; the person is how the system stores + joins it.
 
 ## Capture — hybrid (use the best tool per part)
-- **Content from a known video/channel → API + transcript** (deterministic, cheap, full transcript). No browser needed, and far richer than X/LinkedIn snippets.
+- **Content from a known video/channel → `yt-dlp` transcript** (deterministic, cheap, full transcript). NOTE: YT now token-gates the caption endpoint *and* the on-page transcript panel — naive browser/`fetch` returns empty. `yt-dlp --write-auto-subs --skip-download` works (handles signatures); clean the VTT to text. So the transcript adapter is **yt-dlp, not the browser**.
 - **Recommended / home feed → logged-in browser only** (no API exposes personalized recommendations).
-- **Engagement (like / subscribe / watch) → logged-in browser.**
+- **Engagement (like / subscribe / watch) → logged-in browser. DEFERRED.**
+
+## Recommended-feed discovery (built: `youtube-scraper/discover-youtube.sh`)
+Grows `channels.json` from the recommended feed. A recommended video's **channel**
+is added only when the video passes BOTH strict gates:
+1. **Recency** — published within the last **2 weeks** (≤14 days); older is skipped
+   no matter how relevant.
+2. **Validity** — judged **SIG** by the shared rubric (title + channel +
+   entity-context; no transcript).
+Discovery only — does not watch/transcribe/like/subscribe. Adds the *channel*
+(source), not people.
 
 The judge, rubric, people-db, dedup, discovery, and digest are shared with X/LinkedIn — only the capture adapter differs.
 
@@ -33,7 +43,7 @@ The gate uses entity-context: a video is AI-relevant if the title/desc says so, 
 - Output always credits the channel (person or org); storage only stores humans.
 
 ## people-db append rule
-- Append people who **appear** = **person-host + speakers** (have attributed dialogue / are participants).
+- Append **guests/speakers only**. Recurring co-hosts/panelists (e.g. the All-In four) are NOT appended every video — treat a known panel as part of the org-source; only *guests* grow the human-DB.
 - **Skip mentioned-only** people (referenced in third person) — the YT analog of "@-mention = ignore."
 - **Skip org/brand channels** (Bloomberg Originals, a16z, TED) — not humans (same as denylisting `@OpenAI`).
 - `youtube` field on a record = **the host's channel only** (speakers appear on others' channels, so they get no YT field — just X/LinkedIn if resolved).
