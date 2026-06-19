@@ -1,6 +1,13 @@
 {
   "schema_version": 1,
-  "_status_vocab": ["active", "dormant", "dead", "none", "not_found", "unknown"],
+  "_status_vocab": [
+    "active",
+    "dormant",
+    "dead",
+    "none",
+    "not_found",
+    "unknown"
+  ],
   "_notes": "canonical_name is the join key across platforms. status is per-platform activeness; last_checked is when that platform was last verified (YYYY-MM-DD). role_org doubles as entity-context for the significance filter.",
   "people": [
     {
@@ -8,8 +15,16 @@
       "aliases": [],
       "role_org": "Anthropic (joined May 2026, frontier LLM R&D); ex-OpenAI, ex-Tesla AI; founder Eureka Labs",
       "platforms": {
-        "x": { "handle": "karpathy", "status": "active", "last_checked": "2026-06-19" },
-        "linkedin": { "id": "andrej-karpathy-9a650716", "status": "dead", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": "karpathy",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": "andrej-karpathy-9a650716",
+          "status": "dead",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "Joined Anthropic 2026-05-20 (verified via his X post, 27M views). Now an INSIDER on Claude/Anthropic releases — flips his Fable 5 praise from outsider-echo to insider framing. Bio not yet updated (still 'I like training large deep neural nets'/Stanford). X-native; LinkedIn dead."
     },
@@ -18,8 +33,16 @@
       "aliases": [],
       "role_org": "Chief Scientist, OpenAI",
       "platforms": {
-        "x": { "handle": "merettm", "status": "active", "last_checked": "2026-06-18" },
-        "linkedin": { "id": "jakub-pachocki", "status": "none", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": "merettm",
+          "status": "active",
+          "last_checked": "2026-06-18"
+        },
+        "linkedin": {
+          "id": "jakub-pachocki",
+          "status": "none",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "Low-volume X poster; substantive when he posts (OpenAI research/positioning)."
     },
@@ -28,8 +51,16 @@
       "aliases": [],
       "role_org": "Anthropic; creator/head of Claude Code",
       "platforms": {
-        "x": { "handle": "bcherny", "status": "active", "last_checked": "2026-06-18" },
-        "linkedin": { "id": "bcherny", "status": "dormant", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": "bcherny",
+          "status": "active",
+          "last_checked": "2026-06-18"
+        },
+        "linkedin": {
+          "id": "bcherny",
+          "status": "dormant",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "X: mix of insider launches + real insight + hype. LinkedIn dormant (~10mo)."
     },
@@ -38,8 +69,16 @@
       "aliases": [],
       "role_org": "Host, Dwarkesh Podcast",
       "platforms": {
-        "x": { "handle": "dwarkesh_sp", "status": "active", "last_checked": "2026-06-18" },
-        "linkedin": { "id": "dwarkesh-sp", "status": "dormant", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": "dwarkesh_sp",
+          "status": "active",
+          "last_checked": "2026-06-18"
+        },
+        "linkedin": {
+          "id": "dwarkesh-sp",
+          "status": "dormant",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "X active but mostly history/science clips — off the AI-trend goal. LinkedIn dormant (~10mo)."
     },
@@ -48,18 +87,37 @@
       "aliases": [],
       "role_org": "Associate Professor, Stanford CS; CRFM/HELM; Marin open lab; Together AI",
       "platforms": {
-        "x": { "handle": "percyliang", "status": "active", "last_checked": "2026-06-18" },
-        "linkedin": { "id": "percy-liang-717b8a", "status": "none", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": "percyliang",
+          "status": "active",
+          "last_checked": "2026-06-18"
+        },
+        "linkedin": {
+          "id": "percy-liang-717b8a",
+          "status": "none",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "High-signal on X (posts his own AI lab work). LinkedIn: reactions only, no original posts."
     },
     {
       "canonical_name": "Shim Kyu-hyun",
-      "aliases": ["Gyuhyeon Sim", "심규현"],
+      "aliases": [
+        "Gyuhyeon Sim",
+        "심규현"
+      ],
       "role_org": "Founder & CEO, LETSUR (letsur.ai)",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": "ghsim", "status": "active", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "ghsim",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
       },
       "notes": "LinkedIn-active (multiple posts/week, substantive). From LETSUR research 2026-06-02."
     },
@@ -68,8 +126,16 @@
       "aliases": [],
       "role_org": "Co-founder, LETSUR (ex-DAVIAN Lab, KAIST)",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": "kangyeol-kim-251857138", "status": "unknown", "last_checked": "2026-06-02" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "kangyeol-kim-251857138",
+          "status": "unknown",
+          "last_checked": "2026-06-02"
+        }
       },
       "notes": "Seen in LETSUR research 2026-06-02; activeness not re-verified."
     },
@@ -78,8 +144,16 @@
       "aliases": [],
       "role_org": "Co-founder, LETSUR",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": "taehee-kim-202053131", "status": "active", "last_checked": "2026-06-02" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "taehee-kim-202053131",
+          "status": "active",
+          "last_checked": "2026-06-02"
+        }
       },
       "notes": "Noted as vocal/posting in LETSUR research 2026-06-02; not re-verified since."
     },
@@ -88,8 +162,16 @@
       "aliases": [],
       "role_org": "Co-founder, LETSUR (ex-DAVIAN Lab, KAIST)",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": "wcho92", "status": "unknown", "last_checked": "2026-06-02" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "wcho92",
+          "status": "unknown",
+          "last_checked": "2026-06-02"
+        }
       },
       "notes": "Full canonical name TBD. Seen in LETSUR research 2026-06-02."
     },
@@ -98,8 +180,16 @@
       "aliases": [],
       "role_org": "CEO, Corca (corca-ai)",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": "younghyun", "status": "unknown", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "younghyun",
+          "status": "unknown",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "Corca CEO. LinkedIn id from search; activeness not checked."
     },
@@ -108,8 +198,16 @@
       "aliases": [],
       "role_org": "Co-founder, Corca",
       "platforms": {
-        "x": { "handle": null, "status": "unknown", "last_checked": null },
-        "linkedin": { "id": null, "status": "unknown", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "Corca co-founder surfaced in search; handle not captured."
     },
@@ -118,10 +216,72 @@
       "aliases": [],
       "role_org": "CTO, Corca (claimed)",
       "platforms": {
-        "x": { "handle": null, "status": "not_found", "last_checked": "2026-06-18" },
-        "linkedin": { "id": null, "status": "not_found", "last_checked": "2026-06-18" }
+        "x": {
+          "handle": null,
+          "status": "not_found",
+          "last_checked": "2026-06-18"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "not_found",
+          "last_checked": "2026-06-18"
+        }
       },
       "notes": "Could NOT confirm a 'CTO Alan' at Corca. Closest: 배휘동, 'AX Team Lead @ Corca.ai' (not CTO, no Alan nickname). Needs a real identifier (handle / Korean name)."
+    },
+    {
+      "canonical_name": "Henry Heecheol Moon",
+      "aliases": [],
+      "role_org": "Channel Corporation — Business Development Manager",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "struggling",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Discovered via ghsim LinkedIn reshare (AX study event), 2026-06-19."
+    },
+    {
+      "canonical_name": "Dario Amodei",
+      "aliases": [],
+      "role_org": "Co-founder & CEO, Anthropic",
+      "platforms": {
+        "x": {
+          "handle": "DarioAmodei",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Discovered via @bcherny repost of his AI-exponential essay, 2026-06-19."
+    },
+    {
+      "canonical_name": "Ara Kharazian",
+      "aliases": [],
+      "role_org": "Economist, Ramp (author of the Ramp AI Index)",
+      "platforms": {
+        "x": {
+          "handle": "arakharazian",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Discovered via @bcherny repost of the Ramp AI Index, 2026-06-19."
     }
   ]
 }
