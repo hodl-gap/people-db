@@ -330,6 +330,60 @@
         }
       },
       "notes": "Discovered as GUEST on All-In Podcast (OpenAI CFO interview), 2026-06-19. SNS resolution UNFOUND: obvious @SarahFriar is a different person (104 followers, dormant since 2017) — rejected per confident-only rule. All-In co-hosts NOT appended (guests-only)."
+    },
+    {
+      "canonical_name": "Zixuan Li",
+      "aliases": [],
+      "role_org": "Lead at z.ai (@Zai_org / Zhipu AI) — GLM model team",
+      "platforms": {
+        "x": {
+          "handle": "zixuanli_",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Andrew Ng",
+      "aliases": [],
+      "role_org": "Founder DeepLearning.AI & Coursera; Managing General Partner, AI Fund; Stanford adjunct",
+      "platforms": {
+        "x": {
+          "handle": "andrewyng",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Varun Torka",
+      "aliases": [],
+      "role_org": "Building AI products that actually work | Solopreneur (Singapore)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "varuntorka",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
     }
   ]
 }
