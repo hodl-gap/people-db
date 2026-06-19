@@ -282,6 +282,31 @@
         }
       },
       "notes": "Discovered via @bcherny repost of the Ramp AI Index, 2026-06-19."
+    },
+    {
+      "canonical_name": "Chester Roh",
+      "aliases": [
+        "노정석"
+      ],
+      "role_org": "Serial entrepreneur / AI investor (Korea); founder TNC/Tatter, Bridgetec",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "youtube": {
+          "channel": "@chester_roh",
+          "status": "unknown",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "YouTube channel seeded 2026-06-19. SNS handles unresolved."
     }
   ]
 }
