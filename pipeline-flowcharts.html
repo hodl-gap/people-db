@@ -20,6 +20,7 @@
   .card { background:#fff; border:1px solid #e6e9f0; border-radius:12px; padding:14px 16px 6px; margin:18px 0; }
   .card h2 { font-size:16px; margin:2px 0 2px; }
   .card p { margin:0 0 6px; font-size:13px; color:var(--muted); }
+  .card p b.loop { color:#3a55a8; }
   .mermaid { overflow-x:auto; }
   code { background:#eef1f6; padding:1px 5px; border-radius:4px; font-size:12px; }
 </style>
@@ -27,7 +28,7 @@
 <body>
 <div class="wrap">
   <h1>AI-Trend Monitor — sourcing pipelines</h1>
-  <p class="sub">Three sources, each its own chart; then how their outputs aggregate. Diamonds = 분기 (decisions).</p>
+  <p class="sub">Three sources, each its own chart; then how their outputs aggregate. Diamonds = 분기 (decisions). <b style="color:#3a55a8">Blue dashed = the growth loop</b> (discovery → registry → next run's scan).</p>
   <div class="legend">
     <span><i class="chip" style="background:#fff3cd"></i> 분기 (decision)</span>
     <span><i class="chip" style="background:#e7f5e7"></i> output / action</span>
@@ -38,85 +39,102 @@
   <!-- 1. X -->
   <div class="card">
     <h2>① 𝕏 / Twitter</h2>
-    <p>Two sources — your <b>watchlist</b> (tracked people) and your <b>home feed</b>. Posts are short → judged directly.</p>
+    <p>Watchlist + home feed. <b class="loop">Loop:</b> people-db drives the watchlist scan, and discovered people flow back into people-db → scanned next run.</p>
     <pre class="mermaid">
 flowchart TB
   classDef dec fill:#fff3cd,stroke:#b8860b,color:#5a4500;
   classDef act fill:#e7f5e7,stroke:#2e7d32,color:#14431a;
   classDef stop fill:#f6d6d6,stroke:#a33,color:#7a1c1c;
-  W["Watchlist scan<br/>(tracked people)"] --> Wn{"new posts?"}:::dec
+  classDef reg fill:#dce7ff,stroke:#3a55a8,color:#1b2a55;
+  PDB[("people-db<br/>watchlist")]:::reg
+  PDB ==>|"watchlist · next run"| W["Watchlist scan<br/>(tracked people)"]
+  W --> Wn{"new posts?"}:::dec
   Wn -->|no| Ws["stop · empty"]:::stop
   Wn -->|yes| Wm["merge threads"] --> Wj{"SIG?"}:::dec
   Wj -->|"INSIG / SKIP"| Wr["record for dedup"]:::stop
   Wj -->|SIG| OR["📰 → report"]:::act
   Wj -->|SIG| OE["👍 like + follow"]:::act
-  Wj -->|SIG| OD["➕ reshare author → people-db"]:::act
+  Wj -->|SIG| OD["➕ reshare author"]:::act
   H["Home-feed scan<br/>(bounded)"] --> Hj{"SIG?"}:::dec
   Hj -->|"INSIG / SKIP"| Hr["record for dedup"]:::stop
   Hj -->|SIG| OR
   Hj -->|SIG| OE2["👍 like<br/>(follow only if AI-person)"]:::act
   Hj -->|SIG| Hd{"untracked<br/>& AI-person?"}:::dec
-  Hd -->|yes| OD2["➕ add person → people-db"]:::act
+  Hd -->|yes| OD2["➕ add person"]:::act
   Hd -->|no| Hn["report only"]:::stop
+  OD -. "grows ↺" .-> PDB
+  OD2 -. "grows ↺" .-> PDB
+  linkStyle 16,17 stroke:#3a55a8,stroke-width:2px;
     </pre>
   </div>
 
   <!-- 2. LinkedIn -->
   <div class="card">
     <h2>② in / LinkedIn</h2>
-    <p>Same shape as X — watchlist + home feed, posts judged directly.</p>
+    <p>Same shape as X — same <b class="loop">growth loop</b> through people-db.</p>
     <pre class="mermaid">
 flowchart TB
   classDef dec fill:#fff3cd,stroke:#b8860b,color:#5a4500;
   classDef act fill:#e7f5e7,stroke:#2e7d32,color:#14431a;
   classDef stop fill:#f6d6d6,stroke:#a33,color:#7a1c1c;
-  W["Watchlist scan<br/>(tracked people)"] --> Wn{"new posts?"}:::dec
+  classDef reg fill:#dce7ff,stroke:#3a55a8,color:#1b2a55;
+  PDB[("people-db<br/>watchlist")]:::reg
+  PDB ==>|"watchlist · next run"| W["Watchlist scan<br/>(tracked people)"]
+  W --> Wn{"new posts?"}:::dec
   Wn -->|no| Ws["stop · empty"]:::stop
   Wn -->|yes| Wj{"SIG?"}:::dec
   Wj -->|"INSIG / SKIP"| Wr["record for dedup"]:::stop
   Wj -->|SIG| OR["📰 → report"]:::act
   Wj -->|SIG| OE["👍 like + follow"]:::act
-  Wj -->|SIG| OD["➕ reshare author → people-db"]:::act
+  Wj -->|SIG| OD["➕ reshare author"]:::act
   H["Home-feed scan<br/>(bounded)"] --> Hj{"SIG?"}:::dec
   Hj -->|"INSIG / SKIP"| Hr["record for dedup"]:::stop
   Hj -->|SIG| OR
   Hj -->|SIG| OE2["👍 like<br/>(follow only if AI-person)"]:::act
   Hj -->|SIG| Hd{"untracked<br/>& AI-person?"}:::dec
-  Hd -->|yes| OD2["➕ add person → people-db"]:::act
+  Hd -->|yes| OD2["➕ add person"]:::act
   Hd -->|no| Hn["report only"]:::stop
+  OD -. "grows ↺" .-> PDB
+  OD2 -. "grows ↺" .-> PDB
+  linkStyle 15,16 stroke:#3a55a8,stroke-width:2px;
     </pre>
   </div>
 
   <!-- 3. YouTube -->
   <div class="card">
     <h2>③ ▶ YouTube</h2>
-    <p>Long-form → must read the <b>transcript</b> before judging. Discovery rides on a new video's recommended sidebar.</p>
+    <p>Long-form → read the <b>transcript</b> before judging. <b class="loop">Loop:</b> channels.json drives the channel scan; discovered channels flow back into channels.json → scanned next run. (Guests go to people-db — they get scanned on X/LinkedIn.)</p>
     <pre class="mermaid">
 flowchart TB
   classDef dec fill:#fff3cd,stroke:#b8860b,color:#5a4500;
   classDef act fill:#e7f5e7,stroke:#2e7d32,color:#14431a;
   classDef stop fill:#f6d6d6,stroke:#a33,color:#7a1c1c;
-  C["Channel scan v2<br/>(tracked channels)"] --> Cn{"new video?"}:::dec
+  classDef reg fill:#dce7ff,stroke:#3a55a8,color:#1b2a55;
+  CHN[("channels.json<br/>watchlist")]:::reg
+  CHN ==>|"watchlist · next run"| C["Channel scan v2<br/>(tracked channels)"]
+  C --> Cn{"new video?"}:::dec
   Cn -->|no| Cs["stop · empty"]:::stop
   Cn -->|yes| Pf{"AI by title?"}:::dec
   Pf -->|no| Pk["skip"]:::stop
   Pf -->|yes| Tx["transcript (yt-dlp)"] --> V{"valuable?<br/>(reads content)"}:::dec
   V -->|no| Vk["skip"]:::stop
   V -->|yes| OR["📰 per-video summary → report"]:::act
-  V -->|yes| OG["➕ guests-only → people-db<br/>(confident SNS resolve)"]:::act
+  V -->|yes| OG["➕ guests-only → people-db"]:::act
   V -->|yes| Sb["harvest recommended sidebar"] --> Rg{"≤ 2 weeks<br/>& valuable?"}:::dec
   RD["Recommended-feed<br/>discovery (on-demand)"] --> Rg
   Rg -->|no| Rgk["skip"]:::stop
   Rg -->|yes| Rs{"resolve by video-id<br/>≥ sub-floor?"}:::dec
   Rs -->|"no · impersonator"| Rj["reject"]:::stop
-  Rs -->|yes| OC["➕ channel → channels.json"]:::act
+  Rs -->|yes| OC["➕ add channel"]:::act
+  OC -. "grows ↺" .-> CHN
+  linkStyle 17 stroke:#3a55a8,stroke-width:2px;
     </pre>
   </div>
 
   <!-- 4. Aggregation -->
   <div class="card">
-    <h2>④ Aggregation — how the outputs combine</h2>
-    <p>Each pipeline emits three output kinds; they converge on one digest, one engagement stream, and two registries that feed the next run.</p>
+    <h2>④ Aggregation — how the outputs combine (+ the loops)</h2>
+    <p>Each pipeline emits three output kinds. Significant → one digest; like/follow → engagement; discoveries → the registries, which <b class="loop">loop back</b> as next run's watchlists.</p>
     <pre class="mermaid">
 flowchart TB
   classDef src fill:#eef0ff,stroke:#5560a8,color:#23306b;
@@ -142,9 +160,10 @@ flowchart TB
   L -->|discovered people| PDB
   Y -->|guests| PDB
   Y -->|channels| CHN[("channels.json<br/>YT watchlist")]:::reg
-  PDB == "scanned next run" ==> X
-  PDB == "scanned next run" ==> L
-  CHN == "scanned next run" ==> Y
+  PDB ==>|"↺ scanned next run"| X
+  PDB ==>|"↺ scanned next run"| L
+  CHN ==>|"↺ scanned next run"| Y
+  linkStyle 15,16,17 stroke:#3a55a8,stroke-width:2.5px;
     </pre>
   </div>
 </div>
