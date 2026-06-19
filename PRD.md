@@ -27,8 +27,39 @@ Reading specified people's activity + my home feed; significance filtering;
 dated digests; auto like/follow on significant items; a people/entity registry.
 
 ## Out of scope (for now)
-Posting/replying/DMs; multi-user; real-time; platforms beyond LinkedIn/X;
-podcast/video transcription.
+Posting/replying/DMs; multi-user; real-time; platforms beyond X / LinkedIn /
+YouTube.
+
+## Sources (X, LinkedIn, YouTube)
+
+Capture is a **pluggable adapter per platform**; everything downstream (judge,
+people-db, dedup, per-person digest, discovery) is shared. So adapters can differ
+without breaking human-comprehension consistency — the consistency that matters is
+the *interface and output*, not the capture mechanism.
+
+| | watchlist (what's scanned) | capture | unit |
+|---|---|---|---|
+| **X** | people-db (humans) — policy D | logged-in browser | person's post-stream |
+| **LinkedIn** | people-db (humans) — policy D | logged-in browser | person's post-stream |
+| **YouTube** | `channels.json` (sources: person- *and* org-channels) | API + transcript (content), browser (recommended feed + engagement) | **the video** |
+
+Two registries, deliberately separate:
+- **`people.json`** — humans only; the cross-platform identity/join layer.
+- **`channels.json`** — YouTube sources (a channel may be a person *or* an org like
+  Bloomberg Originals; orgs are sources but never enter the human-db).
+
+**YouTube specifics** (full spec in `YOUTUBE.md`):
+- **Output = per-video; storage = per-person.** One video fans out into N human records.
+- Substance attributed to **speaker(s)**; **host/channel = source** (credited, not owner).
+- **people-db append = people who *appear*** (person-host + speakers); *mentioned-only*
+  people are skipped; **org channels skipped**. `youtube` field = the host's channel only.
+- On an appearing guest, **resolve their SNS confident-only** (else `unfound`); a
+  resolved handle joins the watchlist (policy D) and is monitored on X/LinkedIn — so
+  YT is a discovery funnel into the other sources.
+- **Cheap AI pre-filter** (title/desc + entity-context) before pulling a transcript;
+  non-AI videos are skipped (recorded for dedup), never transcribed.
+- Modes: **v1 on-demand per-URL** (no channels list needed) → **v2 auto** (channels.json
+  → detect new uploads → pre-filter → process).
 
 ## Architecture (lean — the agent does most of the work)
 
@@ -60,31 +91,30 @@ instructions. Only two things need real persistent state.
 
 ## Status checklist
 
-**Foundations**
-- [x] LinkedIn reader (`linkedin-scraper`) — proven
-- [x] X reader (`twitter-scraper-chrome-devtools`) — proven
-- [x] Auth: shared logged-in Chrome profile (X decoupled-login solved)
-- [x] People registry (`people-db`) — seeded
-- [x] Significance rubric v1 (`SIGNIFICANCE.md`) + 37-post labeled corpus
+**Foundations** — done
+- [x] X + LinkedIn readers (browser via chrome-devtools); auth incl. X decoupled-login
+- [x] `people-db` seeded; rubric (`judge_prompt.md`) canonical here
+- [x] Significance rubric v1 + 37-post labeled corpus; judge validated (100% in-sample)
 
-**Persistent state**
-- [ ] Extend `people-db` → entity registry (people + orgs + projects)
-- [ ] Cross-run dedup / seen-ids store
+**M1 — filtered digest** — done (both platforms, verified live)
+- [x] CAPTURE (incremental + thread-expand) → JUDGE (rubric + entity-context) → raw store → per-person digest
 
-**Brain**
-- [ ] Build the judge; validate it reproduces the 37 labels
+**M2 — engagement** — built; dry-run verified both platforms; **live not flipped**
+- [x] One bar: SIG → like + follow (incl. reshared original author); caps, action log, idempotency
+- [ ] Flip to live (one confirming run; verify already-following skip)
 
-**Agent instructions (prompt work)**
-- [ ] Scan prompt: expand & merge threads
-- [ ] Judge prompt: entity lookup · link-follow-if-borderline · in-run topic-dedup · recency
+**Policy D — watchlist = people-db** — done
+- [x] Watchlist derived from people-db; discovery auto-grows people-db each run
 
-**Engagement (the actual point)**
-- [ ] Decide report-worthy vs amplify-worthy (one bar or two)
-- [ ] Auto like + follow on significant items (rate caps + logging)
+**YouTube** — specced (`YOUTUBE.md`); not built
+- [ ] v1 on-demand per-URL: transcript → AI pre-filter → per-video summary → append people-host+speakers (confident SNS resolve, orgs skipped)
+- [ ] v2 auto: `channels.json` → detect new uploads → pre-filter → process
+- [ ] Engagement: like + subscribe on SIG
 
 **Operations**
 - [ ] Scheduling (cron / routine) for hands-off runs
 - [ ] Data gaps: Corca "Alan", Korean founders' X handles, refresh stale statuses
+- [ ] people-db auto-grow is working-copy only — periodic commit / or auto-commit
 
 **Quality (ongoing)**
-- [ ] Grow the labeled corpus until the filter catches what I *genuinely* want
+- [ ] Held-out eval batch (current 100% is in-sample); grow the labeled corpus

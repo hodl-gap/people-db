@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "_notes": "YouTube sources = the v2 auto watchlist. A channel may be a person or an org. Org channels live ONLY here (never in people.json, the human-DB). person-channels link to their people.json record via linked_person (canonical_name). status/last_checked track scanning. Seed by adding channels below.",
+  "_status_vocab": ["active", "dormant", "dead", "unknown"],
+  "_example": {
+    "channel": "@NohJeongsik or UCxxxx (handle or channel id)",
+    "name": "노정식",
+    "kind": "person",
+    "linked_person": "Noh Jeong-sik",
+    "status": "unknown",
+    "last_checked": null,
+    "notes": "host; AI/tech interviews"
+  },
+  "channels": []
+}
