@@ -36,7 +36,7 @@
         "x": {
           "handle": "merettm",
           "status": "active",
-          "last_checked": "2026-06-18"
+          "last_checked": "2026-06-19"
         },
         "linkedin": {
           "id": "jakub-pachocki",
@@ -54,12 +54,12 @@
         "x": {
           "handle": "bcherny",
           "status": "active",
-          "last_checked": "2026-06-18"
+          "last_checked": "2026-06-19"
         },
         "linkedin": {
           "id": "bcherny",
-          "status": "dormant",
-          "last_checked": "2026-06-18"
+          "status": "active",
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "X: mix of insider launches + real insight + hype. LinkedIn dormant (~10mo)."
@@ -72,12 +72,12 @@
         "x": {
           "handle": "dwarkesh_sp",
           "status": "active",
-          "last_checked": "2026-06-18"
+          "last_checked": "2026-06-19"
         },
         "linkedin": {
           "id": "dwarkesh-sp",
-          "status": "dormant",
-          "last_checked": "2026-06-18"
+          "status": "active",
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "X active but mostly history/science clips — off the AI-trend goal. LinkedIn dormant (~10mo)."
@@ -133,8 +133,8 @@
         },
         "linkedin": {
           "id": "kangyeol-kim-251857138",
-          "status": "unknown",
-          "last_checked": "2026-06-02"
+          "status": "active",
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "Seen in LETSUR research 2026-06-02; activeness not re-verified."
@@ -152,7 +152,7 @@
         "linkedin": {
           "id": "taehee-kim-202053131",
           "status": "active",
-          "last_checked": "2026-06-02"
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "Noted as vocal/posting in LETSUR research 2026-06-02; not re-verified since."
@@ -169,8 +169,8 @@
         },
         "linkedin": {
           "id": "wcho92",
-          "status": "unknown",
-          "last_checked": "2026-06-02"
+          "status": "active",
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "Full canonical name TBD. Seen in LETSUR research 2026-06-02."
@@ -187,8 +187,8 @@
         },
         "linkedin": {
           "id": "younghyun",
-          "status": "unknown",
-          "last_checked": "2026-06-18"
+          "status": "active",
+          "last_checked": "2026-06-19"
         }
       },
       "notes": "Corca CEO. LinkedIn id from search; activeness not checked."
@@ -379,6 +379,186 @@
         },
         "linkedin": {
           "id": "varuntorka",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Mark Chen",
+      "aliases": [],
+      "role_org": "Chief Research Officer, OpenAI",
+      "platforms": {
+        "x": {
+          "handle": "markchen90",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Mostafa Rohaninejad",
+      "aliases": [],
+      "role_org": "RL Researcher, OpenAI",
+      "platforms": {
+        "x": {
+          "handle": "mostafarohani",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Cunxiang Wang",
+      "aliases": [],
+      "role_org": "Researcher @Zai_org (z.ai/Zhipu); GLM core contributor",
+      "platforms": {
+        "x": {
+          "handle": "cunxiangwang",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Merve Noyan",
+      "aliases": [],
+      "role_org": "open-sourceress at Hugging Face",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "merve-noyan-28b1a113a",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Kyunghun Lee",
+      "aliases": [],
+      "role_org": "CSO & Deputy CEO @ Channel Corp (AI x B2B SaaS)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "leekh929",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Seungbin Yang",
+      "aliases": [],
+      "role_org": "Graduate Student, KAIST AI (ATR text-to-SQL co-author)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "sbyang99",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Jong Min Kim",
+      "aliases": [],
+      "role_org": "Startup Advisor | AI B2B Sales",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "jmkim125",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "배휘동 (Bae Hwidong)",
+      "aliases": [],
+      "role_org": "AX Team Lead @ Corca.ai",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "hwidongbae",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Kyung Young Lim",
+      "aliases": [],
+      "role_org": "AI Transformation lead @ Krafton (AX/AI literacy)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "crash27",
+          "status": "active",
+          "last_checked": "2026-06-19"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Deedy Das",
+      "aliases": [],
+      "role_org": "Partner at Menlo Ventures (investing in AI startups)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "debarghyadas",
           "status": "active",
           "last_checked": "2026-06-19"
         }

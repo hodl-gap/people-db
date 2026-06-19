@@ -64,6 +64,30 @@
       "notes": "via recommended: The Future of AI Agents with Andrew Ng | Interrupt 26 (1 day ago)",
       "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
       "subscribers": 186000
+    },
+    {
+      "channel": "@stanfordonline",
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg",
+      "url": "https://www.youtube.com/@stanfordonline",
+      "name": "Stanford Online",
+      "kind": "organization",
+      "linked_person": null,
+      "subscribers": 1150000,
+      "status": "unknown",
+      "last_checked": null,
+      "notes": "Discovered via YT recommended feed 2026-06-19 (recent<=2wk + valid/SIG); resolved from video F_7M4Hc-usM."
+    },
+    {
+      "channel": "@markets",
+      "channel_id": "UCIALMKvObZNtJ6AmdCLP7Lg",
+      "url": "https://www.youtube.com/@markets",
+      "name": "Bloomberg Television",
+      "kind": "organization",
+      "linked_person": null,
+      "subscribers": 3190000,
+      "status": "unknown",
+      "last_checked": null,
+      "notes": "Discovered via YT recommended feed 2026-06-19 (recent<=2wk + valid/SIG); resolved from video ktEsOBgToWY."
     }
   ]
 }
