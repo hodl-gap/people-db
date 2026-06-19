@@ -46,6 +46,16 @@
       "status": "unknown",
       "last_checked": null,
       "notes": "Korean serial entrepreneur / AI investor; nearly all AI."
+    },
+    {
+      "channel": "@LangChain",
+      "url": "https://www.youtube.com/@LangChain",
+      "name": "LangChain",
+      "kind": "organization",
+      "linked_person": null,
+      "status": "unknown",
+      "last_checked": null,
+      "notes": "via recommended: The Future of AI Agents with Andrew Ng | Interrupt 26 (1 day ago)"
     }
   ]
 }
