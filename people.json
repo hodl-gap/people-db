@@ -54,7 +54,7 @@
         "x": {
           "handle": "bcherny",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": "bcherny",
@@ -72,7 +72,7 @@
         "x": {
           "handle": "dwarkesh_sp",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": "dwarkesh-sp",
@@ -255,7 +255,7 @@
         "x": {
           "handle": "DarioAmodei",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": null,
@@ -357,7 +357,7 @@
         "x": {
           "handle": "andrewyng",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": null,
@@ -393,7 +393,7 @@
         "x": {
           "handle": "markchen90",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": null,
@@ -411,7 +411,7 @@
         "x": {
           "handle": "mostafarohani",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": null,
@@ -429,7 +429,7 @@
         "x": {
           "handle": "cunxiangwang",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-20"
         },
         "linkedin": {
           "id": null,
@@ -564,6 +564,132 @@
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
+    },
+    {
+      "canonical_name": "Guinness Chen",
+      "aliases": [],
+      "role_org": "Building Codex at OpenAI (prev Stanford, Imbue)",
+      "platforms": {
+        "x": {
+          "handle": "guinnesschen",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "Noam Shazeer",
+      "aliases": [],
+      "role_org": "Joining OpenAI as architecture-research lead; Transformer/MoE co-author, ex-Google",
+      "platforms": {
+        "x": {
+          "handle": "noamshazeer",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "levent",
+      "aliases": [],
+      "role_org": "Mathematician (resolving conjectures with Claude/Mythos)",
+      "platforms": {
+        "x": {
+          "handle": "__alpoge__",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "Nicolas Bustamante",
+      "aliases": [],
+      "role_org": "AI eval/benchmark commentator (founder)",
+      "platforms": {
+        "x": {
+          "handle": "nicbstme",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "Steve Hou",
+      "aliases": [],
+      "role_org": "Head of Research @Silicon_Data",
+      "platforms": {
+        "x": {
+          "handle": "stevehou",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "SungHyun Lee",
+      "aliases": [],
+      "role_org": "Krafton (AI hackathon; built Context Radar meeting-AI tool)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "ventran",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "Daniela Amodei",
+      "aliases": [],
+      "role_org": "Co-founder & President, Anthropic",
+      "platforms": {
+        "x": {
+          "handle": "danielaamodei",
+          "status": "active",
+          "last_checked": "2026-06-20"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
     }
   ]
 }
