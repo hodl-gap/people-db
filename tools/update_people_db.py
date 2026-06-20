@@ -45,6 +45,8 @@ def main():
     data = json.load(open(a.people, encoding="utf-8"))
     people = data["people"]
     idx = {plat_key(r, a.platform): r for r in people if plat_key(r, a.platform)}
+    norm = lambda n: " ".join((n or "").lower().split())
+    name_idx = {norm(r.get("canonical_name")): r for r in people if r.get("canonical_name")}
 
     # 1) refresh: anyone who appears as an author in the raw store was active.
     raw = load_jsonl(a.raw)
@@ -75,6 +77,16 @@ def main():
             skipped.append(handle); continue
         if handle in idx:
             continue  # already known
+        # cross-platform same-person merge: same canonical_name already on file ->
+        # fill THIS platform's handle into that record instead of duplicating.
+        nm = norm(d.get("name") or "")
+        if nm and nm in name_idx:
+            ex = name_idx[nm]; pf = ex["platforms"].setdefault(a.platform, {})
+            if not (pf.get("handle") or pf.get("id")):
+                pf["handle" if a.platform == "x" else "id"] = handle
+                pf["status"] = "active"; pf["last_checked"] = a.today
+            idx[handle] = ex; added.append(ex["canonical_name"] + " (merged)")
+            continue
         rec = {
             "canonical_name": d.get("name") or handle,
             "aliases": [],
@@ -89,7 +101,8 @@ def main():
             },
             "notes": d.get("note", f"Auto-discovered via a significant {a.platform} reshare on {a.today}."),
         }
-        people.append(rec); idx[handle] = rec; added.append(rec["canonical_name"])
+        people.append(rec); idx[handle] = rec
+        name_idx[norm(rec["canonical_name"])] = rec; added.append(rec["canonical_name"])
 
     json.dump(data, open(a.people, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"[people-db] refreshed: {refreshed or '-'}")

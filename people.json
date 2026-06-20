@@ -72,7 +72,7 @@
         "x": {
           "handle": "dwarkesh_sp",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": "dwarkesh-sp",
@@ -339,7 +339,7 @@
         "x": {
           "handle": "zixuanli_",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -380,7 +380,7 @@
         "linkedin": {
           "id": "varuntorka",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-21"
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
@@ -393,7 +393,7 @@
         "x": {
           "handle": "markchen90",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -429,7 +429,7 @@
         "x": {
           "handle": "cunxiangwang",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -470,7 +470,7 @@
         "linkedin": {
           "id": "leekh929",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-21"
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
@@ -560,7 +560,7 @@
         "linkedin": {
           "id": "debarghyadas",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-21"
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-19."
@@ -573,7 +573,7 @@
         "x": {
           "handle": "guinnesschen",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -591,7 +591,7 @@
         "x": {
           "handle": "noamshazeer",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -609,7 +609,7 @@
         "x": {
           "handle": "__alpoge__",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -627,7 +627,7 @@
         "x": {
           "handle": "nicbstme",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -645,7 +645,7 @@
         "x": {
           "handle": "stevehou",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         },
         "linkedin": {
           "id": null,
@@ -668,7 +668,7 @@
         "linkedin": {
           "id": "ventran",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-21"
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-20."
@@ -690,6 +690,150 @@
         }
       },
       "notes": "Auto-discovered via a significant x reshare on 2026-06-20."
+    },
+    {
+      "canonical_name": "Satya Nadella",
+      "aliases": [],
+      "role_org": "Chairman & CEO, Microsoft",
+      "platforms": {
+        "x": {
+          "handle": "satyanadella",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "John Jumper",
+      "aliases": [],
+      "role_org": "Nobel laureate (AlphaFold); leaving Google DeepMind to join Anthropic — hiring for LLM-based scientific discovery",
+      "platforms": {
+        "x": {
+          "handle": "johnjumpersci",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Taylor Sorensen",
+      "aliases": [],
+      "role_org": "Societal Impacts @AnthropicAI; PhD UW NLP (LLMs + alignment, pluralism, democracy)",
+      "platforms": {
+        "x": {
+          "handle": "ma_tay_",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Vik Paruchuri",
+      "aliases": [],
+      "role_org": "Open source AI; Founder @datalabto (prev founded @dataquestio)",
+      "platforms": {
+        "x": {
+          "handle": "vikparuchuri",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Akshay",
+      "aliases": [],
+      "role_org": "Co-founder @dailydoseofds_; LLMs/AI Agents/RAG/ML educator; ex-AI Engineer @LightningAI",
+      "platforms": {
+        "x": {
+          "handle": "akshay_pachaar",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Nikita Reddy",
+      "aliases": [],
+      "role_org": "AI Engineer (fine-tuned BioMistral-7B medical LLM w/ QLoRA+Unsloth on free GPU)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "n1kye",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Alexander Gorny",
+      "aliases": [],
+      "role_org": "Co-Founder @ FLUX AI / Craisee; Founder @ ki.academy (AI coding tools, EU AI sovereignty)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "alexandergorny",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Nikesh Arora",
+      "aliases": [],
+      "role_org": "Chairman & CEO, Palo Alto Networks (AI-driven cybersecurity)",
+      "platforms": {
+        "x": {
+          "handle": "nikesharora",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        },
+        "linkedin": {
+          "id": "nikesh-arora-02894670",
+          "status": "active",
+          "last_checked": "2026-06-21"
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
     }
   ]
 }
