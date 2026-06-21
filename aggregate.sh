@@ -20,16 +20,22 @@ BRIEF_DIR="$DIR/briefs"; mkdir -p "$BRIEF_DIR"
 ITEMS="$BRIEF_DIR/.items-$DATE.jsonl"
 BRIEF="$BRIEF_DIR/brief-$DATE.md"
 
-# --- collect today's SIG/VALUABLE items from all 3 scrapers' raw stores ---
-python3 - "$DATE" "$ITEMS" \
+# Recency cutoff for X/LinkedIn (fast-moving SNS): drop items PUBLISHED more than
+# RECENCY_DAYS before the brief date so first-scan back-catalog doesn't leak in.
+# YouTube is EXEMPT here — it has its own <=14d recency gate at capture/discovery.
+RECENCY_DAYS="${RECENCY_DAYS:-7}"
+CUTOFF="$(python3 -c "import datetime;print((datetime.date.fromisoformat('$DATE')-datetime.timedelta(days=$RECENCY_DAYS)).isoformat())")"
+
+# --- collect the brief-date's SIG/VALUABLE items (scraped that day, published within RECENCY_DAYS) ---
+python3 - "$DATE" "$CUTOFF" "$ITEMS" \
   "$DIR/../twitter-scraper-chrome-devtools/store/raw" \
   "$DIR/../linkedin-scraper/store/raw" \
   "$DIR/../youtube-scraper/store/raw" <<'PY'
 import sys, glob, json, os
-date, out = sys.argv[1], sys.argv[2]
-dirs = sys.argv[3:]
+date, cutoff, out = sys.argv[1], sys.argv[2], sys.argv[3]
+dirs = sys.argv[4:]
 keep = {"SIG", "VALUABLE"}
-rows = []
+rows, dropped_old = [], 0
 for d in dirs:
     for fp in glob.glob(os.path.join(d, "*.jsonl")):
         if os.path.basename(fp).startswith("."): continue
@@ -40,16 +46,21 @@ for d in dirs:
             except Exception: continue
             if o.get("label") not in keep: continue
             if not str(o.get("scraped_at", "")).startswith(date): continue
+            pub = str(o.get("date") or "")[:10]      # ISO YYYY-MM-DD when present
+            # 7d recency applies to fast-moving SNS only; YouTube keeps its own gate
+            if o.get("platform") in ("x", "linkedin") and len(pub) == 10 and pub < cutoff:
+                dropped_old += 1; continue
             rows.append({
                 "platform": o.get("platform", ""),
                 "author": o.get("author") or o.get("channel") or "",
                 "handle": o.get("handle") or o.get("profile") or o.get("channel") or "",
+                "date": o.get("date"),
                 "text": (o.get("text") or o.get("title") or "")[:600],
                 "source": o.get("id", ""),
             })
 with open(out, "w", encoding="utf-8") as f:
     for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
-print(f"{len(rows)} significant items for {date}")
+print(f"{len(rows)} significant items for {date} (dropped {dropped_old} published before {cutoff})")
 PY
 
 NITEMS=$(grep -c . "$ITEMS" 2>/dev/null || echo 0)
