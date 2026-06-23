@@ -72,7 +72,7 @@
         "x": {
           "handle": "dwarkesh_sp",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": "dwarkesh-sp",
@@ -339,7 +339,7 @@
         "x": {
           "handle": "zixuanli_",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -429,7 +429,7 @@
         "x": {
           "handle": "cunxiangwang",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -573,7 +573,7 @@
         "x": {
           "handle": "guinnesschen",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -627,7 +627,7 @@
         "x": {
           "handle": "nicbstme",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -645,7 +645,7 @@
         "x": {
           "handle": "stevehou",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -699,7 +699,7 @@
         "x": {
           "handle": "satyanadella",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -753,7 +753,7 @@
         "x": {
           "handle": "vikparuchuri",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -771,7 +771,7 @@
         "x": {
           "handle": "akshay_pachaar",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": null,
@@ -825,7 +825,7 @@
         "x": {
           "handle": "nikesharora",
           "status": "active",
-          "last_checked": "2026-06-21"
+          "last_checked": "2026-06-23"
         },
         "linkedin": {
           "id": "nikesh-arora-02894670",
@@ -834,6 +834,222 @@
         }
       },
       "notes": "Auto-discovered via a significant x reshare on 2026-06-21."
+    },
+    {
+      "canonical_name": "Alex Imas",
+      "aliases": [],
+      "role_org": "Director of AGI Economics, Google DeepMind; Professor (on leave) @ Chicago Booth",
+      "platforms": {
+        "x": {
+          "handle": "alexolegimas",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Yun-Ta Tsai",
+      "aliases": [],
+      "role_org": "Sr. Staff Engineer, Tesla AI",
+      "platforms": {
+        "x": {
+          "handle": "yunta_tsai",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Carmen Li",
+      "aliases": [],
+      "role_org": "Dual CEO, Compute Exchange & Silicon Data (ex-Bloomberg, ex-DRW)",
+      "platforms": {
+        "x": {
+          "handle": "carmenli",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Charles Lamanna",
+      "aliases": [],
+      "role_org": "EVP of Agents & Business Apps, Microsoft (ex-founder MetricsHub)",
+      "platforms": {
+        "x": {
+          "handle": "clamanna",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Daniel van Strien",
+      "aliases": [],
+      "role_org": "Machine Learning Librarian, Hugging Face",
+      "platforms": {
+        "x": {
+          "handle": "vanstriendaniel",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Sam Altman",
+      "aliases": [],
+      "role_org": "CEO, OpenAI",
+      "platforms": {
+        "x": {
+          "handle": "sama",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Karl Mehta",
+      "aliases": [],
+      "role_org": "3x exited founder/CEO; building TrustModel.ai (AI model validation & governance); author 'AI for Digital Public Infrastructure'; ex-Menlo Ventures VC",
+      "platforms": {
+        "x": {
+          "handle": "karlmehta",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Alan Ritter",
+      "aliases": [],
+      "role_org": "Computing professor at Georgia Tech — NLP, ML, AI",
+      "platforms": {
+        "x": {
+          "handle": "alan_ritter",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Roberto-Rafael Maura-Rivero",
+      "aliases": [],
+      "role_org": "Research engineer @Meta; Postdoc @Oxford; Econ PhD @LSE; AI Alignment & Safety; prev intern @GoogleDeepMind",
+      "platforms": {
+        "x": {
+          "handle": "rrmaura",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Huan Sun",
+      "aliases": [],
+      "role_org": "Professor @OhioState; LLM-based agent capability & safety/security; transformer limitations",
+      "platforms": {
+        "x": {
+          "handle": "hhsun1",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Anand Oswal",
+      "aliases": [],
+      "role_org": "EVP, Palo Alto Networks (Prisma AIRS — agentic-AI security)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "anandoswal",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "Jeongmin Lee",
+      "aliases": [],
+      "role_org": "Solo AI builder ('Explore how far one person can grow with AI'); presented at OpenAI Founder Day on Codex for non-developers",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "jyoung105",
+          "status": "active",
+          "last_checked": "2026-06-23"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-23."
     }
   ]
 }
