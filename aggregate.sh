@@ -50,12 +50,18 @@ for d in dirs:
             # 7d recency applies to fast-moving SNS only; YouTube keeps its own gate
             if o.get("platform") in ("x", "linkedin") and len(pub) == 10 and pub < cutoff:
                 dropped_old += 1; continue
+            if o.get("platform") == "youtube":          # title for attribution + summary for content
+                txt = o.get("title") or ""
+                if o.get("summary"): txt += " — " + o["summary"]
+                txt = txt[:700]
+            else:
+                txt = (o.get("text") or o.get("title") or "")[:600]
             rows.append({
                 "platform": o.get("platform", ""),
                 "author": o.get("author") or o.get("channel") or "",
                 "handle": o.get("handle") or o.get("profile") or o.get("channel") or "",
                 "date": o.get("date"),
-                "text": (o.get("text") or o.get("title") or "")[:600],
+                "text": txt,
                 "source": o.get("id", ""),
             })
 with open(out, "w", encoding="utf-8") as f:
@@ -88,6 +94,9 @@ PROMPT=$(cat <<EOF
   '(YouTube) ...'로 붙여 다른 플랫폼 항목과 통합하라(한 영상에 여러 추적 인물이 나오면
   각자 밑에 적되 같은 영상임이 드러나게). 어떤 추적 인물도 중심이 아닐 때(진행자만 나오는
   패널, 비추적 인물 영상)에만 마지막에 '## <채널명> (YouTube 채널)' 섹션으로 따로 둔다.
+  YouTube 항목의 text에는 제목 뒤에 ' — '로 영상 내용 요약이 들어 있다. 불릿에 제목만 적지
+  말고, 그 요약을 바탕으로 영상이 실제로 다룬 핵심(누가 무엇을 말·분석했는지)을 한두 줄로
+  사실 그대로 적어라.
 - 개인이 아니라 기업·제품·조직의 공식 계정/회사 페이지(예: OpenAI, Micron, Sakana AI,
   Cursor, Google Cloud, alphaXiv, SemiAnalysis, 각종 회사 페이지)가 올린 항목은 개별 인물
   섹션으로 만들지 마라. 대신 맨 끝에 단 하나의 '## 기업/조직 소식' 섹션으로 모아

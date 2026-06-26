@@ -18,7 +18,7 @@
         "x": {
           "handle": "karpathy",
           "status": "active",
-          "last_checked": "2026-06-19"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": "andrej-karpathy-9a650716",
@@ -54,7 +54,7 @@
         "x": {
           "handle": "bcherny",
           "status": "active",
-          "last_checked": "2026-06-20"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": "bcherny",
@@ -72,7 +72,7 @@
         "x": {
           "handle": "dwarkesh_sp",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": "dwarkesh-sp",
@@ -339,7 +339,7 @@
         "x": {
           "handle": "zixuanli_",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -429,7 +429,7 @@
         "x": {
           "handle": "cunxiangwang",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -573,7 +573,7 @@
         "x": {
           "handle": "guinnesschen",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -645,7 +645,7 @@
         "x": {
           "handle": "stevehou",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -699,7 +699,7 @@
         "x": {
           "handle": "satyanadella",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -771,7 +771,7 @@
         "x": {
           "handle": "akshay_pachaar",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -825,7 +825,7 @@
         "x": {
           "handle": "nikesharora",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": "nikesh-arora-02894670",
@@ -843,7 +843,7 @@
         "x": {
           "handle": "alexolegimas",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -861,7 +861,7 @@
         "x": {
           "handle": "yunta_tsai",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -879,7 +879,7 @@
         "x": {
           "handle": "carmenli",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -897,7 +897,7 @@
         "x": {
           "handle": "clamanna",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -915,7 +915,7 @@
         "x": {
           "handle": "vanstriendaniel",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-24"
         },
         "linkedin": {
           "id": null,
@@ -951,7 +951,7 @@
         "x": {
           "handle": "karlmehta",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -1005,7 +1005,7 @@
         "x": {
           "handle": "hhsun1",
           "status": "active",
-          "last_checked": "2026-06-23"
+          "last_checked": "2026-06-26"
         },
         "linkedin": {
           "id": null,
@@ -1050,6 +1050,402 @@
         }
       },
       "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-23."
+    },
+    {
+      "canonical_name": "\"Leigh Marie\" Braswell",
+      "aliases": [],
+      "role_org": "Partner @ Kleiner Perkins (ex-Founders Fund, early Scale AI); ML/infra investor",
+      "platforms": {
+        "x": {
+          "handle": "lm_braswell",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Max Spero",
+      "aliases": [],
+      "role_org": "CEO/co-founder, Pangram (AI-writing detection)",
+      "platforms": {
+        "x": {
+          "handle": "max_spero_",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Nahfid Nissar",
+      "aliases": [],
+      "role_org": "AI builder — Koshur Pixel (Kashmiri low-resource OCR dataset)",
+      "platforms": {
+        "x": {
+          "handle": "nahfidn",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Adina Yakup",
+      "aliases": [],
+      "role_org": "Hugging Face (Chinese ML community); OCR/model curation",
+      "platforms": {
+        "x": {
+          "handle": "adinayakup",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Greg Brockman",
+      "aliases": [],
+      "role_org": "President & Co-Founder, OpenAI",
+      "platforms": {
+        "x": {
+          "handle": "gdb",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Nathan Lambert",
+      "aliases": [],
+      "role_org": "Open model research; prev co-led Olmo @Ai2; writes @interconnectsai; author of The RLHF Book",
+      "platforms": {
+        "x": {
+          "handle": "natolambert",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Jessy Lin",
+      "aliases": [],
+      "role_org": "Co-founder @EngramLab (continual learning); prev PhD @Berkeley_AI",
+      "platforms": {
+        "x": {
+          "handle": "realjessylin",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "jun",
+      "aliases": [],
+      "role_org": "Founder, Aside (@AsideAI) — AI browser (YC F25)",
+      "platforms": {
+        "x": {
+          "handle": "hyojun_at",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Alishba Imran",
+      "aliases": [],
+      "role_org": "ML researcher @OpenAI; prev @Biohub, @arcinstitute; AI x biology; co-author 'AI for Robotics'",
+      "platforms": {
+        "x": {
+          "handle": "alishbaimran_",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Aaron Levie",
+      "aliases": [],
+      "role_org": "CEO @Box — applied AI / agents in enterprise content",
+      "platforms": {
+        "x": {
+          "handle": "levie",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Andre Zayarni",
+      "aliases": [],
+      "role_org": "Co-founder & CEO @ Qdrant (vector search / AI retrieval infra)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "zayarni",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Jiuhua Yang",
+      "aliases": [],
+      "role_org": "AI/ML @ Huawei (LLM inference & serving)",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "jiuhua-yang-3677b0413",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Seeyong Lee",
+      "aliases": [],
+      "role_org": "AI x AX Educator & Consultant | CFA Charterholder",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "beseeyong",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Simon Seojoon Kim",
+      "aliases": [],
+      "role_org": "CEO & Managing Partner, Hashed (AI-native VC; agent-economy / vibe-coding operator)",
+      "platforms": {
+        "x": {
+          "handle": "simonkim_nft",
+          "status": "active",
+          "last_checked": "2026-06-24"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-24."
+    },
+    {
+      "canonical_name": "Lilian Weng",
+      "aliases": [],
+      "role_org": "Co-founder Thinking Machines Lab; ex-VP AI Safety & Applied Research, OpenAI; author of Lil'Log",
+      "platforms": {
+        "x": {
+          "handle": "lilianweng",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Dawn Song",
+      "aliases": [],
+      "role_org": "Professor CS UC Berkeley, co-Director Berkeley RDI; joining Meta Superintelligence Labs as VP of AI Research",
+      "platforms": {
+        "x": {
+          "handle": "dawnsongtweets",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Jiwei Li",
+      "aliases": [],
+      "role_org": "deepreinforce; ex-Facebook AI; PhD Stanford NLP (open-source agentic-coding models, Ornith)",
+      "platforms": {
+        "x": {
+          "handle": "jiweili1",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Azeem Azhar",
+      "aliases": [],
+      "role_org": "Founder, Exponential View (AI-economy analysis; authored bottom-up GenAI economy index)",
+      "platforms": {
+        "x": {
+          "handle": "azeem",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Xin Eric Wang",
+      "aliases": [],
+      "role_org": "Professor UC Santa Barbara; Head of Research, Simular AI; multimodal AI agents",
+      "platforms": {
+        "x": {
+          "handle": "xwang_lk",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Behnam Neyshabur",
+      "aliases": [],
+      "role_org": "Co-Founder & CEO, Mirendil; ex-Anthropic (Discovery team), ex-Google DeepMind",
+      "platforms": {
+        "x": {
+          "handle": "bneyshabur",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        },
+        "linkedin": {
+          "id": null,
+          "status": "unknown",
+          "last_checked": null
+        }
+      },
+      "notes": "Auto-discovered via a significant x reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "David Sauerwein",
+      "aliases": [],
+      "role_org": "AI/ML at AWS | PhD in Quantum Physics",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "davidsauerwein",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-26."
+    },
+    {
+      "canonical_name": "Yi Liu",
+      "aliases": [],
+      "role_org": "AI Security | AI Research Engineer @ Common Defense | PhD @ NTU",
+      "platforms": {
+        "x": {
+          "handle": null,
+          "status": "unknown",
+          "last_checked": null
+        },
+        "linkedin": {
+          "id": "yi-liu-755692145",
+          "status": "active",
+          "last_checked": "2026-06-26"
+        }
+      },
+      "notes": "Auto-discovered via a significant linkedin reshare on 2026-06-26."
     }
   ]
 }
